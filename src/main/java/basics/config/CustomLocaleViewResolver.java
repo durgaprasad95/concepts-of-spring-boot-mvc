@@ -11,7 +11,7 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 @Configuration
-public class InternationalSolver extends WebMvcConfigurerAdapter {
+public class CustomLocaleViewResolver extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {

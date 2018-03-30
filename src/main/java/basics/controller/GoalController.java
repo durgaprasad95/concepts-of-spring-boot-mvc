@@ -21,16 +21,22 @@ public class GoalController {
 		Goal goal = new Goal();
 		goal.setMinutes(10);
 		model.addAttribute("goal", goal);
+
 		return "addGoal";
 	}
 
 	@RequestMapping(value = "addGoal", method = RequestMethod.POST)
 	public String updateGoal(@Valid @ModelAttribute("goal") Goal goal, BindingResult result) {
-		System.out.println("result has errors " + result.hasErrors());
-		System.out.println("Minutes " + goal.getMinutes());
+
+		System.out.println("result has errors: " + result.hasErrors());
+
+		System.out.println("Goal set: " + goal.getMinutes());
+
 		if (result.hasErrors()) {
 			return "addGoal";
 		}
-		return "redirect:addMinutes.html";
+
+		return "redirect:index.jsp";
 	}
+
 }

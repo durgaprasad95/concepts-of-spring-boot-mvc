@@ -14,4 +14,5 @@ public class Goal {
 	public void setMinutes(int minutes) {
 		this.minutes = minutes;
 	}
+
 }
